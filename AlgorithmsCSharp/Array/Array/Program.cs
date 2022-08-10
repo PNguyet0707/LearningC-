@@ -34,6 +34,9 @@ namespace Array
             Console.Write("Mời bạn nhập số cột của ma trận 1 ");
             int col1 = Convert.ToInt32(Console.ReadLine());
 
+            /*
+             * 
+             */
             int[,] Mt1 = new int[row1, col1];
             NhapMaTran(Mt1);
             InMaTran(Mt1);
@@ -51,10 +54,7 @@ namespace Array
 
 
 
-
-
-
-
+            // Nhập ma trận 
             void NhapMaTran(int[,] a)
             {
 
@@ -67,6 +67,7 @@ namespace Array
                         a[i, j] = Convert.ToInt32(Console.ReadLine());
                     }
             }
+            // In Ma trận 
             void InMaTran(int[,] a)
             {
                 int row = a.GetLength(0);
@@ -85,16 +86,21 @@ namespace Array
                 }
             }
 
-
+            // Nhân 2 ma trận 
             void NhanMaTran(int[,] M1, int[,] M2)
             {
+                /* Lấy độ dài dòng và cột của ma trận 
+                 * Hàm GetLength() : Lấy số dòng hoặc cột của 1 mảng 2 chiều 
+                 * 0: lấy số dòng
+                 * 1: Lấy số cột 
+                 */
+                
                 int Row1 = M1.GetLength(0);
                 int Col1 = M1.GetLength(1);
                 int Row2 = M2.GetLength(0);
                 int Col2 = M2.GetLength(1);
                 int[] A1 = new int[Row1];
-                int[] A2 = new int[Col2];
-
+               
                 int[,] kq = new int[Row1, Col2];
                 for (int i = 0; i < Row1; i++)
                     for (int j = 0; j < Col2; j++)
