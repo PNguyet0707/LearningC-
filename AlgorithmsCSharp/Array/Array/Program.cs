@@ -114,10 +114,18 @@ namespace Array
                 }
                 else
                 {
+                    /*
+                     * Khởi tạo 1 mảng răng cưa - mảng của mảng để chứa các cột trong ma trận B 
+                     * Ma trận arrCol2 có Col2 dòng 
+                     */
                     int[][] arrCol2 = new int[Col2][];
                     for (int i = 0; i < Col2; i++)
                     {
+                        // Số phần tử trong 1 dòng của mảng răng cưa bằng số dòng trong ma trận B 
                         arrCol2[i] = new int[Row2];
+                        // Duyệt giá trị của các dòng trong mảng B
+                        // gán cho các giá trị đó cho các dòng trong mảng răng cưa arrCol2
+
                         for (int j = 0; j < Row2; j++)
                         {
                             arrCol2[i][j] = M2[j, i];
@@ -131,6 +139,8 @@ namespace Array
                         {
                             A1[j] = Mt1[i, j]; 
                         }
+                        // Vòng lặp để nhân các giá trị của các dòng thứ i của  ma trận 1
+                        // cho các cột( các dòng của ma trận răng cưa) ma trận 2 
                         for (int n = 0; n < Col2; n++)
                         {
                             for (int m = 0; m < Row2; m++)
