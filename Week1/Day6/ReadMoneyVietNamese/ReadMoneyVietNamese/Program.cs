@@ -13,29 +13,14 @@ namespace ReadMoneyVietNamese
     {
         static void Main(string[] args)
         {
-            InputEncoding = Encoding.UTF8;
+            InputEncoding = Encoding.Unicode;
             OutputEncoding = Encoding.UTF8;
 
             long numberMoney;
             Write("Số tiền muốn chuyển thành chữ :  ");
             numberMoney = Convert.ToInt64(ReadLine());
-            //Write("Chọn kiểu viết \"Linh\" hay \"Lẻ\": ");
-            //string Choice = ReadLine();
-            WriteLine("Chọn kiểu viết \"Linh\" hay \"Lẻ\": ");
-            Write("1: Linh \n2: Lẻ \n");
+            Write("Chọn kiểu viết \"Linh\" hay \"Lẻ\": ");          
             string  choice = ReadLine();
-            switch(choice)
-            {
-                case "1":
-                    choice = "Linh ";
-                    break;
-                case "2":
-                    choice = "Lẻ ";
-                    break;
-            }
-
-
-
             WriteLine(ReadMoney(numberMoney,choice));
 
 
