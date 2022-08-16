@@ -1,0 +1,149 @@
+﻿<Window x:Class="Listbox_Bts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Listbox_Bts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="6000" Width="800">
+    <StackPanel HorizontalAlignment="Center">
+        <!--Khai báo tạo lập một hộp danh mục với các thuộc tính về căn lề, chiều rộng,…-->
+        <ListBox Margin="10,30,0,30"  
+            Width="280" 
+             Name="listBox1"
+             VerticalAlignment="Top">
+            <!--Khai báo tạo lập một chỉ mục con trong hộp danh mục với thuộc tính màu nền-->
+            <ListBoxItem Background="Beige">
+                <!--Lồng vào chỉ mục này một StackPanel để có thể chứa nhiều hơn 1 phần tử UI con theo chiều ngang-->
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Name="chkRm"
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked"></CheckBox>
+                    <!--Khai báo tạo lập một ảnh 1 member  ở đầu mỗi chỉ mục-->
+                    <Image Width="50" Height="50"  Source="/joonie.jpg" />
+
+                    <!--Khai báo tạo lập một dòng chữ chỉ tên member -->
+                    <TextBlock Margin="5" 
+                           VerticalAlignment="Center" 
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic"
+                           FontSize="18">
+                    Kim Nam Joon
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <!--Khai báo chỉ mục 2 tương tự như trên-->
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Name="chkJin" 
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50" Height="50" Source="/achin.jpg"></Image>
+                    <TextBlock Margin="5"
+                           VerticalAlignment="Center" 
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic" FontSize="18">
+                    Kim Seok Jin
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <!--Khai báo chỉ mục 3 tương tự như trên-->
+            <ListBoxItem Background="Beige">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="chkSuga" 
+                              Checked="HandleChecked"
+                              VerticalAlignment="Center"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50" Height="50"
+                       Source="/su.jpg"></Image>
+                    <TextBlock Margin="5"
+                           VerticalAlignment="Center" 
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic" 
+                           FontSize="18">
+                    Min Yun Gi
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <!--Khai báo chỉ mục 4 tương tự như trên-->
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="chkJHope" 
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50"
+                       Height="50" Source="/hobi.jpg" IsEnabled="False" Stretch="UniformToFill"></Image>
+                    <TextBlock Margin="5" 
+                           VerticalAlignment="Center"
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic" 
+                           FontSize="18">
+                    Jung Ho Seok
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <!--Khai báo chỉ mục 5 tương tự như trên-->
+            <ListBoxItem Background="Beige">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="chkJiMin" 
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50" Height="50" 
+                       Source="./jimin.jpg"></Image>
+                    <TextBlock Margin="5"
+                           VerticalAlignment="Center"
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic"
+                           FontSize="18">
+                    Park JiMin
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Background="Beige">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="chkV" 
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50" Height="50" 
+                       Source="/V.jpg"></Image>
+                    <TextBlock Margin="5"
+                           VerticalAlignment="Center"
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic"
+                           FontSize="18">
+                    Kim Tae Hyung
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Background="Beige">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="chkJk" 
+                              VerticalAlignment="Center"
+                              Checked="HandleChecked"
+                              Unchecked="HandleUnchecked">
+                    </CheckBox>
+                    <Image Width="50" Height="50" 
+                       Source="/kookie.jpg"></Image>
+                    <TextBlock Margin="5"
+                           VerticalAlignment="Center"
+                           FontFamily="Times New Roman"
+                           FontStyle="Italic"
+                           FontSize="18">
+                    Joen JungKook
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+        <Button Click="DislayCustomerChoices" Width="100" VerticalAlignment="Bottom" > Mời thành viên </Button>
+    </StackPanel>
+</Window>

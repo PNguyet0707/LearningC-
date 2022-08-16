@@ -1,0 +1,238 @@
+﻿<!--<Window x:Class="Control.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <Label Height="30" HorizontalAlignment="Left" 
+               Margin="10,15,0,0" 
+               Name="label1"
+               VerticalAlignment="Top" 
+               Width="60">
+            Họ đệm:
+        </Label>
+        <Label Height="30" 
+               HorizontalAlignment="Left" 
+               Margin="10,50,0,0"
+               Name="label2"
+               VerticalAlignment="Top" 
+               Width="60">
+            Tên:
+        </Label>
+        <TextBox Height="30" 
+                 Margin="80,17,30,0" 
+                 Name="textBox1" 
+                 VerticalAlignment="Top" />
+        <TextBox Height="30" 
+                 Margin="80,52,30,0" 
+                 Name="textBox2" 
+                 VerticalAlignment="Top" />
+        <Label Height="30"
+               HorizontalAlignment="Left"
+               Margin="10,94,0,0"
+               Name="label3"
+               VerticalAlignment="Top" 
+               Width="60">
+            Giới tính:
+        </Label>
+        <RadioButton Height="22" 
+                     Margin="80,99,0,0" 
+                     Name="radioButton1"
+                     VerticalAlignment="Top" 
+                     HorizontalAlignment="Left" 
+                     Width="79" 
+                     GroupName="GioiTinh"
+                     IsChecked="True">
+                Nam
+        </RadioButton>
+        <RadioButton Height="22" 
+                     HorizontalAlignment="Right" 
+                     Margin="0,99,30,0"
+                     Name="radioButton2"
+                     VerticalAlignment="Top"
+                     Width="79"
+                     GroupName="GioiTinh">
+                Nữ
+        </RadioButton>
+        <Label HorizontalAlignment="Left"
+               Margin="10,127,0,105" 
+               Name="label4"
+               Width="69">
+             Ngoại ngữ:
+        </Label>
+        <CheckBox Margin="84,0,119,110" 
+                  Name="checkBox1" 
+                  Height="20"
+                  IsChecked="True">
+               Tiếng Anh
+        </CheckBox>
+        <CheckBox HorizontalAlignment="Right" 
+                  Margin="0,0,24,110" Name="checkBox2"
+                  Width="85" Height="20">
+            Tiếng Trung
+        </CheckBox>
+        <Label Height="30" 
+               HorizontalAlignment="Left" 
+               Margin="10,0,0,126" 
+               Name="label5"
+               VerticalAlignment="Bottom" 
+               Width="69">
+            Quê quán:
+        </Label>
+        <ListBox Height="68" 
+                 Margin="80,0,33,77"
+                 Name="listBox1" 
+                 VerticalAlignment="Bottom"
+                 SelectedIndex="0">
+            <ListBoxItem>Hà nội</ListBoxItem>
+            <ListBoxItem>TP. Hồ Chí Minh</ListBoxItem>
+            <ListBoxItem>Hải Phòng</ListBoxItem>
+            <ListBoxItem>Đà Nẵng</ListBoxItem>
+        </ListBox>
+        <Button Height="35" 
+                HorizontalAlignment="Left" 
+                Margin="16,0,0,27" 
+                Name="button1"
+                VerticalAlignment="Bottom" 
+                Width="110"
+                Click="button1_Click">
+            Xem thông tin
+        </Button>
+        <Button Height="35" 
+                HorizontalAlignment="Right"
+                Margin="0,0,24,27" 
+                Name="button2"
+                VerticalAlignment="Bottom" 
+                Width="110"
+                Click="button2_Click">                
+            Nhập lại
+        </Button>
+        
+    </Grid>
+</Window>-->
+<Window x:Class="Control.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Ví dụ Control - WPF" Height="352" Width="300">
+    <Grid>
+        <Label Height="30" 
+               HorizontalAlignment="Left"
+               Margin="10,15,0,0" 
+               Name="label1"
+               VerticalAlignment="Top" 
+               Width="60"
+               Focusable="False">
+            Họ đệm:
+        </Label>
+        <Label Height="30" 
+               HorizontalAlignment="Left"
+               Margin="10,50,0,0" 
+               Name="label2"
+               VerticalAlignment="Top" 
+               Width="60">Tên:
+        </Label>
+        <TextBox Height="30"
+                 Margin="80,17,30,0" 
+                 Name="textBox1"
+                 VerticalAlignment="Top">
+            Nhập họ đệm 
+        </TextBox>
+        <TextBox Height="30"
+                 Margin="80,52,30,0"
+                 Name="textBox2" 
+                 VerticalAlignment="Top" />
+        <Button Height="35"
+                HorizontalAlignment="Left" 
+                Margin="16,0,0,27" 
+                Name="button1"
+                VerticalAlignment="Bottom"
+                Width="110" 
+                Click="button1_Click">
+            Xem thông tin
+        </Button>
+        <Button Height="35" 
+                HorizontalAlignment="Right" 
+                Margin="0,0,24,27" 
+                Name="button2"
+                VerticalAlignment="Bottom" 
+                Width="110" 
+                Click="button2_Click">
+            Nhập lại
+        </Button>
+        <Label Height="30"
+               HorizontalAlignment="Left"
+               Margin="10,94,0,0" 
+               Name="label3"
+               Width="60">
+            Giới tính:
+        </Label>
+        <RadioButton 
+            Height="22"
+            Margin="80,99,0,0"
+            Name="radioButton1"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left"
+            Width="79"
+            GroupName="GioiTinh"
+            IsChecked="True">
+            Nam
+        </RadioButton>
+        <RadioButton
+            Height="22" 
+            HorizontalAlignment="Right" 
+            Margin="0,99,30,0"
+            Name="radioButton2" 
+            VerticalAlignment="Top"
+            Width="79"
+            GroupName="GioiTinh">
+            Nữ
+        </RadioButton>
+        <Label 
+            HorizontalAlignment="Left" 
+            Margin="10,127,0,154" 
+            Name="label4"
+            Width="69">
+            Ngoại ngữ:
+        </Label> 
+        <CheckBox 
+            Margin="84,132,119,0" 
+            Name="checkBox1" 
+            Height="20"
+            VerticalAlignment="Top" 
+            IsChecked="True">
+            Tiếng Anh
+        </CheckBox>
+        <CheckBox 
+            HorizontalAlignment="Right" 
+            Margin="0,132,24,0"
+            Name="checkBox2"
+            Width="85" 
+            Height="20"
+            VerticalAlignment="Top">
+            Tiếng Trung
+        </CheckBox>
+        <Label 
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="10,0,0,126" 
+            Name="label5"
+            VerticalAlignment="Bottom"
+            Width="69">
+            Quê quán:
+        </Label>
+        <ComboBox 
+            Height="26"
+            Margin="84,0,27,126"
+            Name="comboBox1"
+            VerticalAlignment="Bottom" 
+            SelectedIndex="0">
+            <ComboBoxItem>Hà Nội</ComboBoxItem>
+            <ComboBoxItem>TP. Hồ Chí Minh</ComboBoxItem>
+            <ComboBoxItem>Hải Phòng</ComboBoxItem>
+            <ComboBoxItem>Đà Nẵng</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

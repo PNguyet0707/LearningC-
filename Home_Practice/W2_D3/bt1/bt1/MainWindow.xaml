@@ -1,0 +1,25 @@
+﻿<Window x:Class="bt1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bt1"
+        mc:Ignorable="d"
+        Title="Đọc số " Height="350" Width="400">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Nhập số cần đọc</Label>
+            <TextBox Width="100" Name="txtNumber"></TextBox>
+        </StackPanel>
+        <Label> Kết quả </Label>
+        <Rectangle HorizontalAlignment="Left" Margin="10" Stroke="SkyBlue" StrokeThickness="4" StrokeDashArray="4 0.1" Width="400"> </Rectangle>
+        <Label Margin="10 50 " Name="txtResult"> Kết quả nè </Label>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button  Width="100" Margin="0 0 20 0 " Click="btn_ResultClick">Kết quả </Button>
+            <Button Width="100" Name="btn_Close" Click="btn_Close_Click"> Đóng </Button>
+
+        </StackPanel>
+
+
+    </StackPanel>
+</Window>

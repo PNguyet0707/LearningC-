@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="copy.png" />
+    <None Remove="cut.png" />
+    <None Remove="paste.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="copy.png" />
+    <Resource Include="cut.png" />
+    <Resource Include="paste.png" />
+  </ItemGroup>
+
+</Project>

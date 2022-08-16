@@ -1,0 +1,32 @@
+﻿<Window x:Class="Combobox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Combobox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--Sử dụng stack panel theo chiều dọc làm layout chính của form-->
+    <StackPanel Width="250"
+                Orientation="Vertical" 
+                Height="100"
+                VerticalAlignment="Top"
+                Margin="40,20,0,0 ">
+        <!--Khai báo tạo lập tiêu đề của điều khiển-->
+        <TextBlock FontFamily="Verdana" FontWeight="DemiBold">
+         Danh mục phông hệ thống:
+        </TextBlock>
+        <!--Khai báo tạo điều khiển Combox-->
+        <ComboBox
+            ItemsSource="{x:Static Fonts.SystemFontFamilies}" 
+            SelectedIndex="0">
+            <!--Khai báo định nghĩa thuộc tính dữ liệu gắn với mỗi mục chọn-->
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock
+                        Text="{Binding}" FontFamily="{Binding}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </StackPanel>
+</Window>

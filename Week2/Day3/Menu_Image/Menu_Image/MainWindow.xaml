@@ -1,0 +1,48 @@
+﻿<Window x:Class="Menu_Image.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu_Image"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <StackPanel>
+        <!--Khai bao Tài nguyên cần sử dụng-->
+        <StackPanel.Resources>
+            <Image x:Key="copy"  Source="/copy.png" Width="16" Height="16"></Image>
+            <Image x:Key="cut" Source="/cut.png" Width="16" Height="16"></Image>
+            <Image x:Key="paste" Source="/paste.png"  Width="16" Height="16"></Image>
+        </StackPanel.Resources>
+        <Menu Height="22" Name="menu1" VerticalAlignment="Top" >
+            <MenuItem Header="Thực đơn _1" Name="Menu1">
+                <!--Ba Menu Copy, Cut, Paste được gắn biểu tượng-->
+                <MenuItem Header="_Copy"
+                          Command="ApplicationCommands.Copy" 
+                          ToolTip="Copy văn bản" Icon="{StaticResource copy}" />
+                <MenuItem Header="_Cut" 
+                          Command="ApplicationCommands.Cut" 
+                          ToolTip="Cắt văn bản"
+                          Icon="{StaticResource cut}" />
+                <MenuItem Header="_Paste" Command="ApplicationCommands.Paste" ToolTip="Dán văn bản" 
+                          Icon="{StaticResource paste}" />
+            </MenuItem>
+            <MenuItem Header="Thực đơn _2" Name="Menu2">
+                <MenuItem Header="Thực đơn 21">
+                    <MenuItem Header="Thực đơn 211" Click="MenuItem211_Click" />
+                    <MenuItem Header="Thực đơn 212" Click="MenuItem212_Click" />
+                </MenuItem>
+                <MenuItem Header="Thực đơn 22" Click="MenuItem22_Click" />
+                <!--Thực đơn có trạng thái Checked và UnChecked-->
+                <MenuItem Header="Thực đơn 23" 
+                          IsCheckable="True" Checked="MenuItem_Checked"
+                          Unchecked="MenuItem_Unchecked"/>
+            </MenuItem>
+            <MenuItem Header="Thực đơn _3"
+                      Click="MenuItem3_Click" Name="Menu3" />
+        </Menu>
+        <TextBox Name="textBox1" TextWrapping="Wrap" Margin="2">
+            Chú cào cào nhỏ, ngồi trong đám cỏ.
+        </TextBox>
+    </StackPanel>
+</Window>

@@ -1,12 +1,116 @@
-﻿<Window x:Class="P1.MainWindow"
+﻿<!--<Window x:Class="P1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800">    
+        <Button Name="button" Margin="10" Click="button_Click" >
+            <Button.LayoutTransform>
+                <ScaleTransform ScaleX="3" ScaleY="3">
+                </ScaleTransform> 
+            </Button.LayoutTransform>
+            Hello World
+        </Button>
+   
+</Window>-->
+    
+    
 
+<!--Khai báo khởi tạo cửa sổ-->   
+<Window x:Class="P1.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Lesson1 - StackPanel" Height="500" Width="850">
+    <!--Sử dụng StackPanel sắp xếp ngầm định theo chiều dọc-->
+    <!--<StackPanel Background="Beige">
+        --><!--Thiết lập thuộc tính khung viền bao quanh control 1--><!--
+        <Border Width="200" BorderBrush="DarkSlateBlue" Background="#a9e969"
+BorderThickness="2">
+            --><!--Khai báo control 1 dạng checkbox--><!--
+            <CheckBox>Control 1</CheckBox>
+        </Border>
+        --><!--Khai báo control 2 dạng nút bấm--><!--
+        <Button Width="200">Control 2</Button>
+        --><!--Thiết lập thuộc tính khung viền bao quanh control 3--><!--
+        <Border Width="200" BorderBrush="#feca00" BorderThickness="2">
+            --><!--Khai báo control 3 dạng text--><!--
+            <TextBlock HorizontalAlignment="Right">Control 3</TextBlock>
+        </Border>
+    </StackPanel>-->
+    <!--<DockPanel>
+        <TextBlock FontSize="16" DockPanel.Dock="Top"
+                   Foreground="red">
+                   Control 1
+        </TextBlock>
+        <Button DockPanel.Dock="Right">Control 2</Button>
+        <Button DockPanel.Dock="Bottom">Control 3</Button>
+        <Button DockPanel.Dock="Right">Control 4</Button>
+        <Border DockPanel.Dock="Bottom" BorderBrush="#feca00" BorderThickness="2">
+            <TextBlock>Control 5</TextBlock>
+        </Border>
+        <Border DockPanel.Dock="Left" BorderBrush="black" BorderThickness="2">
+            <TextBlock>Control6</TextBlock>
+        </Border>
+    </DockPanel>-->
+
+    <!--Sử dụng Canvas-->
+    <!--<Canvas Background="Beige">
+        <TextBlock FontSize="16" 
+                   Canvas.Top="10"
+                   Canvas.Left="20"
+                   Foreground="#58290A">
+                  Chú cào cào nhỏ, xanh như hạt đỗ
+        </TextBlock>
+        <Button Canvas.Bottom="25" 
+                Canvas.Right="50" 
+                Width="100">
+            Control 2
+        </Button>
+        <Border BorderBrush="#feca00" 
+                BorderThickness="2" 
+                Height="50" Width="50"
+                Canvas.Top="20" 
+                Canvas.Left="50">
+        <TextBlock>
+             Control 3
+        </TextBlock>
+        </Border>
+    </Canvas>-->
+    <!---Sử dụng panel Grid có các cạnh cách lề 10 pixel và có hiển thị các đường kẻ ô-->
+    <Grid Margin="10" ShowGridLines="True">
+        <!--Định nghĩa thuộc tính cột - Có tổng cộng 2 cột-->
+        <Grid.ColumnDefinitions>
+            <!--Khai báo cột 0 - có chiều rộng tỉ lệ gấp đôi cột kế tiếp--> 
+            <!--Khai báo cột 1 - Thuộc tính ngầm định-->
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--Định nghĩa thuộc tính hàng - Có tổng cộng 3 hàng -->
+        <Grid.RowDefinitions>
+            <!--Khai báo hàng 0 có chiều cao bằng 25 pixel-->
+            <RowDefinition Height="25" />
+            <!--Khai báo hàng 1 - Thuộc tính ngầm định -->
+            <RowDefinition />
+            <!--Khai báo hàng 2 - Đặt chiều cao gấp đôi hàng trước (hàng 1)-->
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <!--Đặt TextBlock 1 vào cột 0 hàng 0-->
+        <TextBlock FontSize="16"
+                   Foreground="#58290A"
+                   Grid.Column="0" Grid.Row="0">
+                   Chú cào cào nhỏ
+        </TextBlock>
+        <!--Đặt Button vào vị trí cột 0 hàng 1-->
+        <Button Grid.Column="0" Grid.Row="1">
+            Control 2
+        </Button>
+        <!--Đặt Border vào vị trí cột 1 hàng 2-->
+        <Border BorderBrush="#feca00" 
+                BorderThickness="2"
+                Grid.Column="1" Grid.Row="2">
+            <TextBlock>Control 3</TextBlock>
+        </Border>
     </Grid>
-</Window>
+</Window>   

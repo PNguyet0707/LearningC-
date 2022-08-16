@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace P1
+namespace Expander
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,10 +24,5 @@ namespace P1
         {
             InitializeComponent();
         }
-
-    //    private void button_Click(object sender, RoutedEventArgs e)
-    //    {
-    //        button.Content = "From HCM city, Vietnam ";
-    //    }
     }
 }

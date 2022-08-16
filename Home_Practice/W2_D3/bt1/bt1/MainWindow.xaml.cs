@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReadNumber; 
 
-namespace P1
+namespace bt1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,10 +25,18 @@ namespace P1
         {
             InitializeComponent();
         }
+        readNumber readnumber = new readNumber();
+        private void btn_ResultClick(object sender, RoutedEventArgs e)
+        {
+            long kq = Convert.ToInt64(txtNumber.Text);
 
-    //    private void button_Click(object sender, RoutedEventArgs e)
-    //    {
-    //        button.Content = "From HCM city, Vietnam ";
-    //    }
+            txtResult.Content = readNumber.ReadNumber(kq, "Linh"); ;
+
+        }
+
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
