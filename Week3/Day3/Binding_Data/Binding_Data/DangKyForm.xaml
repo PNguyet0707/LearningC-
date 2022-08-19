@@ -1,0 +1,36 @@
+﻿<Window x:Class="Binding_Data.DangKyForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding_Data"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <ListView  Name="Insertmem"  HorizontalContentAlignment="Center" >
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Mã thành viên</Label>
+            <TextBox Width="100" Name="Inid"  ></TextBox>
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Tên thành viên</Label>
+            <TextBox Width="100" Name="Inname" ></TextBox>
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Địa chỉ</Label>
+            <TextBox Width="100" Name="Indiachi" ></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Ngày sinh</Label>
+            <TextBox Width="100" Name="Inns" ></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Tên tài khoản</Label>
+            <TextBox Width="100" Name="Intk" ></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Mật khẩu</Label>
+            <TextBox Width="100" Name="Inpass"  ></TextBox>
+        </StackPanel>
+        <Button Name="btn_Insert" Click="BtnInsertTv_Click"  >Đăng ký</Button>
+    </ListView>
+</Window>

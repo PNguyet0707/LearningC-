@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPF_With_SQL.UpdateKhForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_With_SQL"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual"               
+        Title="Window1" Height="250" Width="400">
+    <!--ItemsSource="{Binding}"
+    Text="{Binding Path= ma_kh}"
+    Text="{Binding Path= ten_kh}"
+    Text="{Binding Path= dia_chi}
+    -->
+    <ListView  Name="updateTv"  HorizontalContentAlignment="Center" ItemsSource="{Binding}">
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Mã thành viên </Label>
+            <TextBox Width="100"  IsReadOnly="True" Text="{Binding Path= ma_mem}" ></TextBox>
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Tên thành viên </Label>
+            <TextBox Width="100" Text="{Binding Path= ten_mem}"></TextBox>
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" Margin="10 10 ">
+            <Label >Địa chỉ</Label>
+            <TextBox Width="100" Text="{Binding Path= dia_chi}"></TextBox>
+        </StackPanel>
+        <Button Name="btn_Update"  Click="btn_Update_Click">Update</Button>
+    </ListView>
+</Window>

@@ -18,6 +18,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 
+
 namespace bai3
 {
     /// <summary>
@@ -31,33 +32,11 @@ namespace bai3
             InputEncoding = Encoding.Unicode;
             OutputEncoding = Encoding.Unicode;
 
-            //connection.Open();
-            //var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
-            //int[] listMa = new int[7];
-            //string[] listHoten = new string[7];
-            //string[] listDiaChi = new string[7];
-            //var i = 0;
-            //if (reader.HasRows)
-            //{
-            //    while (reader.Read())
-            //    {
-            //        listMa[i] = reader.GetInt32(0);
-            //        listHoten[i] = reader.GetString(1);
-            //        listDiaChi[i] = reader.GetString(3);
-            //        i++;
-            //    }
-            //}
-            //for (int j = 0; j < 7; j++)
-            //{
-            //    WriteLine(listMa[j] + "-" + listHoten[j] + "-" + listDiaChi[j]);
-            //}
-            //connection.Close();
-            //ListViewKhachHang.ItemsSource = listHoten;
-
 
            
 
         }
+        DataSet dataSet = new DataSet("data");
 
         private void BtnXem_Click(object sender, RoutedEventArgs e)
         {
@@ -87,13 +66,31 @@ namespace bai3
             adapter.SelectCommand = command;
 
             // Fill the DataSet.
-            DataSet dataSet = new DataSet("data");
             adapter.Fill(dataSet);
             ListViewKhachHang.DataContext = dataSet.Tables[0].DefaultView;
+
             //MessageBox.Show();
         }
 
-       
+        private void BtnSua_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            //MessageBox.Show(ListViewKhachHang.SelectedItems.Count.ToString());
+            Button button = (Button)sender;
+            var dataContext = button.DataContext;
+            //var  data = dataContext;
+            var lvData = (DataRowView)button.DataContext;
+            // var id = lvData[0];
+            ListViewKhachHang.Items.Remove(lvData);
+
+
+        }
+
+        private void BtnXoa_Click(object sender, RoutedEventArgs e)
+        {
+           // ListViewKhachHang.SelectedItem;
+        }
     }
 }
    
